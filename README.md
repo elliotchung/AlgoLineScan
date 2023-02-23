@@ -1,6 +1,6 @@
 # AlgoLineScan
 Uses Tradier API's historical data to find trendlines
-Based loosely on these parameters: https://www.reddit.com/r/RealDayTrading/comments/rf6crv/what_are_algo_lines/?utm_source=share&utm_medium=web2x&context=3
+Based loosely on these parameters: https://www.reddit.com/r/RealDayTrading/comments/rf6crv/what_are_algo_lines/
 ## Steps
 1. Download all files into the same folder
 2. Input your access token from tradier in One_OHLC_data.py
