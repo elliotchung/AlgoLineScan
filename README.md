@@ -16,3 +16,4 @@ Based loosely on these parameters: https://www.reddit.com/r/RealDayTrading/comme
 1. Not for Log Scale trendlines
 2. Have not filtered out earnings dates
 3. Only works for trendlines connecting lows
+4. Very slow if choosing a long date range
