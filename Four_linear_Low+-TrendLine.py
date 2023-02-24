@@ -10,22 +10,15 @@ startingIndex = Three_LongWicks.startingIndex
 def create_line_dict(x1, y1, x2, y2, limit):
     slope = (y2 - y1) / (x2 - x1)
     x_values = list(range(x1, limit))
-    #print(x_values)
     y_values = [y1 + slope * (x - x1) for x in x_values]
-    #log_y_values = [math.log(y, 10) for y in y_values]  # calculate logarithmic y-values
 
     result = {}
-    #print('hi',x_values)
     for i in range(len(x_values)):
         x = x_values[i]
-        #y = log_y_values[i]  # use logarithmic y-value
         y = y_values[i] # use linear y-value
         result[x] = y
     return result
     
-
-#create_line_dict(StartingCandleIndex[0], data['day'][StartingCandleIndex[0]]['low'], 
-#ConnectingCandleIndex[20], data['day'][ConnectingCandleIndex[20]]['low'], len(data['day']))
 
 #create a dicitonary of indexes that starting candle can connect to
 PossibleConnectionsDict = {}
@@ -81,6 +74,5 @@ for i in range(0, len(StartingCandleIndex)):
 for i in range(0, len(StartingCandleIndex)):
     keys_list = list(PossibleConnectionsDict[StartingCandleIndex[i]].keys())
     for j in range(0, len(keys_list)):
-        print(StartingCandleIndex[i],data['day'][StartingCandleIndex[i]]['date'], 
-        keys_list[j],data['day'][keys_list[j]]['date'],PossibleConnectionsDict[StartingCandleIndex[i]][keys_list[j]][len(data['day'])-1])
-print(latest_candle_price)
+        print("from",StartingCandleIndex[i],data['day'][StartingCandleIndex[i]]['date'], 
+        "to",keys_list[j],data['day'][keys_list[j]]['date'],PossibleConnectionsDict[StartingCandleIndex[i]][keys_list[j]][len(data['day'])-1])
