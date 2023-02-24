@@ -15,4 +15,3 @@ for i in range(0, len(VolumeList) - MovingAvg+1):
 for i in range(MovingAvg-1, len(VolumeList)):
     if VolumeDict[i] > fiftyDayAvgdict[i]:
         HighVolumeIndex.append(i)
-print(HighVolumeIndex)
